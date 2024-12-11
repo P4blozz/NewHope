@@ -166,7 +166,7 @@ function checkout() {
     let message = 'Olá, gostaria de comprar os seguintes itens:\n\n ';
     cart.forEach(productId => {
         const product = productData[productId];
-        message += `?? ${product.ref}\n\n?? ${product.size}\n\n`;
+        message += `📦 ${product.ref}\n\n?? ${product.size}\n`;
     });
 
     const whatsappLink = `https://wa.me/5531985079718?text=${encodeURIComponent(message)}`;
