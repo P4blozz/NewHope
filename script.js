@@ -151,22 +151,22 @@ function loadCart() {
 function checkout() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const productData = {
-        'produto1': { img: 'imagens/frente.webp', ref: 'REF: 001', size: 'Tamanho: G' },
-        'produto2': { img: 'imagens/frente.webp', ref: 'REF: 002', size: 'Tamanho: G' },
-        'produto3': { img: 'imagens/frente.webp', ref: 'REF: 003', size: 'Tamanho: M' },
-        'produto4': { img: 'imagens/frente.webp', ref: 'REF: 004', size: 'Tamanho: P' },
-        'produto5': { img: 'imagens/frente.webp', ref: 'REF: 005', size: 'Tamanho: GG' },
-        'produto6': { img: 'imagens/frente.webp', ref: 'REF: 006', size: 'Tamanho: G' },
-        'produto7': { img: 'imagens/frente.webp', ref: 'REF: 007', size: 'Tamanho: M' },
-        'produto8': { img: 'imagens/frente.webp', ref: 'REF: 008', size: 'Tamanho: GG' },
-        'produto9': { img: 'imagens/frente.webp', ref: 'REF: 009', size: 'Tamanho: P' },
-        'produto10': { img: 'imagens/frente.webp', ref: 'REF: 010', size: 'Tamanho: G' }
+        'produto1': { ref: 'REF: #001', size: 'Tamanho: G' },
+        'produto2': { ref: 'REF: #002', size: 'Tamanho: G' },
+        'produto3': { ref: 'REF: #003', size: 'Tamanho: M' },
+        'produto4': { ref: 'REF: #004', size: 'Tamanho: P' },
+        'produto5': { ref: 'REF: #005', size: 'Tamanho: GG' },
+        'produto6': { ref: 'REF: #006', size: 'Tamanho: G' },
+        'produto7': { ref: 'REF: #007', size: 'Tamanho: M' },
+        'produto8': { ref: 'REF: #008', size: 'Tamanho: GG' },
+        'produto9': { ref: 'REF: #009', size: 'Tamanho: P' },
+        'produto10': { ref: 'REF: #010', size: 'Tamanho: G' }
     };
 
-    let message = 'Olá, gostaria de comprar os seguintes itens:\n ';
+    let message = 'Olá, gostaria de comprar os seguintes itens:\n\n ';
     cart.forEach(productId => {
         const product = productData[productId];
-        message += `📦 ${product.ref}\n📏 ${product.size}\n`;
+        message += `?? ${product.ref}\n\n?? ${product.size}\n\n`;
     });
 
     const whatsappLink = `https://wa.me/5531985079718?text=${encodeURIComponent(message)}`;
