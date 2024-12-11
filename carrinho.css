@@ -1,0 +1,98 @@
+/* BACKGROUND */
+body {
+    background-image: url('imagens/background.png'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover; /* Para cobrir toda a área */
+    background-attachment: fixed; /* A imagem fica fixa ao rolar */
+    background-position: center; /* Centraliza a imagem */
+    margin: 0;
+    padding: 0;
+    height: auto; /* Ajuste para que o corpo fique com altura automática */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da viewport */
+    display: flex;
+    flex-direction: column; /* Para que o rodapé fique no fim */
+}
+/* RODAPÉ */
+footer {
+  background: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0rem;
+  margin-top: auto; /* Faz com que o rodapé fique empurrado para o final */
+}
+
+footer a {
+  color: #00b7ff;
+  text-decoration: none;
+}
+
+footer .socials a {
+  margin: 0 0.5rem;
+  font-size: 20px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 30px; /* Ajuste o tamanho conforme necessário */
+  height: 30px; /* Ajuste o tamanho conforme necessário */
+  margin: 0 10px; /* Espaçamento entre os ícones */
+  transition: transform 0.3s; /* Transição suave para efeito de hover */
+}
+
+.social-media a:hover .social-icon {
+  transform: scale(1.2);
+}
+
+ /* PÁGINA DE FAVORITOS */
+/* SACOLA */
+.sacola-container {
+    position: relative; /* Para que a sacola se posicione em relação ao fluxo normal do documento */
+    margin: 20px auto; /* Margens para centralizar e espaçar */
+    z-index: 1; /* Coloca o card acima da imagem de fundo */
+    max-width: 800px; /* Largura máxima */
+    width: 80%; /* Largura responsiva */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px; /* Espaçamento interno */
+}
+/* BOtÂO DE COMPRAR TUDO */
+#checkout-container button {
+  background-color: #282b29; /* Verde vibrante */
+  color: #fff; /* Texto branco */
+  font-size: 1.2rem; /* Tamanho da fonte maior */
+  font-weight: bold; /* Negrito */
+  padding: 10px 20px; /* Espaçamento interno */
+  border: none; /* Remove bordas padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s, transform 0.2s; /* Efeitos de transição */
+  cursor: pointer; /* Cursor de mão ao passar o mouse */
+}
+
+#checkout-container button:hover {
+  background-color: #000000; /* Cor mais escura ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+#checkout-container button:active {
+  background-color: #000000; /* Cor ao clicar */
+  transform: scale(0.98); /* Leve redução ao clicar */
+}
+
+/* Centralizar o botão no container */
+#checkout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Espaço acima do botão */
+}
+
+/* ÍCONES DO NAVBAR */
+.nav-icon {
+  width: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+  height: auto; /* Mantém a proporção do ícone */
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+  vertical-align: middle; /* Alinha o ícone verticalmente ao centro do texto */
+}
