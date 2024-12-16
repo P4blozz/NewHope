@@ -15,6 +15,11 @@ function loadCart() {
     const cartContainer = document.querySelector('.cart-list');
     const checkoutContainer = document.getElementById('checkout-container');
 
+    if (!cartContainer) {
+        console.error("Elemento '.cart-list' não encontrado no DOM.");
+        return;
+    }
+
     if (cart.length === 0) {
         cartContainer.innerHTML = '<p>O seu carrinho está vazio.</p><a href="catalogo.html" class="btn btn-primary">Ir para o Catálogo</a>';
         checkoutContainer.innerHTML = ''; // Remove o botão de "Comprar" se o carrinho estiver vazio
@@ -41,6 +46,7 @@ function addToCart(productId) {
 
     updateCartCount(); // Atualiza o contador após adicionar
     loadCart(); // Atualiza a lista do carrinho
+    showCustomAlert(); // Exibe alerta de item adicionado ao carrinho
 }
 
 // Função para remover do carrinho
@@ -86,16 +92,11 @@ function createProductCard(productId) {
 document.addEventListener('DOMContentLoaded', () => {
     updateCartCount(); // Atualiza o contador ao carregar a página
     loadCart(); // Carrega o carrinho
-
+    
     // Se necessário, pode ser adicionado um evento de clique para ir diretamente para o carrinho
     document.getElementById('cart-icon').addEventListener('click', () => {
         window.location.href = 'carrinho.html'; // Redireciona para a página do carrinho
     });
-
-    // Função para carregar o carrinho com botão de "Comprar"
-    if (document.title === "Carrinho") {
-        loadCart();
-    }
 
     // Inicializa o carrossel
     startCarousel();
@@ -104,6 +105,44 @@ document.addEventListener('DOMContentLoaded', () => {
 // Função para ir para a página do carrinho
 function goToCart() {
     window.location.href = 'carrinho.html'; // Redireciona para a página do carrinho
+}
+
+// ALERTA DE ADICIONADO AO CARRINHO
+
+// Exibir o alerta
+function showCustomAlert() {
+    const alertBox = document.getElementById('custom-alert');
+    const overlay = document.getElementById('dark-overlay');
+
+    if (alertBox && overlay) {
+        alertBox.style.display = 'block';
+        overlay.style.display = 'block';
+    } else {
+        console.error("Elementos do alerta não encontrados no DOM.");
+    }
+}
+
+// Ocultar o alerta
+function hideCustomAlert() {
+    const alertBox = document.getElementById('custom-alert');
+    const overlay = document.getElementById('dark-overlay');
+
+    if (alertBox && overlay) {
+        alertBox.style.display = 'none';
+        overlay.style.display = 'none';
+    } else {
+        console.error("Elementos do alerta não encontrados no DOM.");
+    }
+}
+
+// Continuar comprando
+function continueShopping() {
+    hideCustomAlert();
+}
+
+// Ir para o carrinho
+function goToCart() {
+    window.location.href = 'carrinho.html';
 }
 
 // CARROSEL
@@ -191,5 +230,15 @@ function checkCartIconVisibility() {
 }
 
 // Chama a função ao carregar a página
-document.addEventListener('DOMContentLoaded', checkCartIconVisibility);
+document.addEventListener('DOMContentLoaded', () => {
+    checkCartIconVisibility(); // Verifica a visibilidade do ícone do carrinho
+    updateCartCount(); // Atualiza o contador ao carregar a página
+    loadCart(); // Carrega o carrinho
+});
 
+// FECHAR O ALERTA "X"
+
+function closeAlert() {
+    document.getElementById('custom-alert').style.display = 'none';
+    document.getElementById('dark-overlay').style.display = 'none';
+  }

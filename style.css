@@ -169,3 +169,77 @@ footer .socials a {
     text-align: center;
     line-height: 22px; /* Ajuste conforme o tamanho da bolinha */
 }
+/* ALERTA DE ADICIONADO AO CARRINHO */
+/* Fundo escuro */
+#dark-overlay {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fundo mais escuro e opaco */
+    z-index: 1040;
+}
+
+/* Estilo do alerta */
+#custom-alert {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff; /* Fundo branco */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    border-radius: 12px; /* Bordas mais arredondadas */
+    z-index: 1050;
+    text-align: center;
+    padding: 30px; /* Padding maior para um layout mais arejado */
+    width: 300px; /* Largura ajustada para menor */
+    animation: fadeIn 0.3s ease; /* Animação de entrada */
+}
+
+/* Estilo do título */
+#custom-alert h2 {
+    margin: 0 0 15px; /* Margem para separar o título do restante */
+    font-family: 'Arial', sans-serif; /* Fonte moderna */
+    font-size: 18px; /* Tamanho do texto do título */
+    color: #333; /* Cor do texto do título */
+}
+
+/* Estilo da mensagem */
+#custom-alert p {
+    margin: 0 0 20px; /* Margem para separar a mensagem do botão */
+    font-family: 'Arial', sans-serif;
+    font-size: 14px; /* Tamanho do texto da mensagem */
+    color: #666; /* Cor do texto da mensagem */
+}
+
+/* Estilo do botão */
+#custom-alert button {
+    background-color: #28a745; /* Cor verde para o botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Padding para o botão */
+    font-size: 15px; /* Tamanho do texto do botão */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    width: 190px; /* Largura fixa para todos os botões */
+    margin: 7px; /* Margem para garantir espaço entre os botões */
+}
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+  
+  
