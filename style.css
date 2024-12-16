@@ -136,3 +136,36 @@ footer .socials a {
     margin-right: 8px; /* Espaço entre o ícone e o texto */
     vertical-align: middle; /* Alinha o ícone verticalmente ao centro do texto */
   }
+  
+/* CARRINHO FIXADO */
+.cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f8f9fa;
+    border-radius: 50%;
+    padding: 8px; /* Aumente ou diminua o valor para ajustar o tamanho */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000; /* Garantir que o ícone apareça acima de outros elementos */
+}
+
+.cart-icon-img {
+    width: 50px; /* Aumente ou diminua o valor para ajustar o tamanho do ícone */
+    height: 50px; /* Aumente ou diminua o valor para ajustar o tamanho do ícone */
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 18px; /* Aumente ou diminua o valor para ajustar o tamanho do número */
+    font-weight: bold;
+    border-radius: 50%;
+    width: 24px; /* Aumente ou diminua o valor para ajustar o tamanho da bolinha */
+    height: 24px; /* Aumente ou diminua o valor para ajustar o tamanho da bolinha */
+    text-align: center;
+    line-height: 22px; /* Ajuste conforme o tamanho da bolinha */
+}
