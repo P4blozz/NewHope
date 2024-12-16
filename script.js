@@ -178,3 +178,18 @@ function checkout() {
     const whatsappLink = `https://wa.me/5531985079718?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, '_blank');
 }
+
+// Função para verificar a página atual e mostrar/ocultar o ícone do carrinho
+function checkCartIconVisibility() {
+    const cartIcon = document.getElementById('cart-icon');
+    const currentPage = window.location.pathname.split('/').pop(); // Pega o nome do arquivo atual
+    if (currentPage === 'index.html' || currentPage === 'catalogo.html') {
+        cartIcon.style.display = 'block'; // Mostra o ícone
+    } else {
+        cartIcon.style.display = 'none'; // Esconde o ícone
+    }
+}
+
+// Chama a função ao carregar a página
+document.addEventListener('DOMContentLoaded', checkCartIconVisibility);
+

@@ -144,15 +144,15 @@ footer .socials a {
     right: 20px;
     background-color: #f8f9fa;
     border-radius: 50%;
-    padding: 8px; /* Aumente ou diminua o valor para ajustar o tamanho */
+    padding: 9px; /* Aumente ou diminua o valor para ajustar o tamanho */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     z-index: 1000; /* Garantir que o ícone apareça acima de outros elementos */
 }
 
 .cart-icon-img {
-    width: 50px; /* Aumente ou diminua o valor para ajustar o tamanho do ícone */
-    height: 50px; /* Aumente ou diminua o valor para ajustar o tamanho do ícone */
+    width: 35px; /* Aumente ou diminua o valor para ajustar o tamanho do ícone */
+    height: 35px; /* Aumente ou diminua o valor para ajustar o tamanho do ícone */
 }
 
 .cart-count {
