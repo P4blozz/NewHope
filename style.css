@@ -239,7 +239,42 @@ footer .socials a {
         transform: translate(-50%, -50%);
     }
 }
+/* BOTÕES DE FILTRO DE MARCAS (CHRONIC E BLESSED) */
 
+.btn-circle {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #007bff; /* Cor de fundo */
+    margin: 0 15px; /* Margem entre os botões */
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
 
+.btn-circle:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+.btn-icon {
+    width: 100%; /* Faz a imagem ocupar toda a largura do botão */
+    height: 100%; /* Faz a imagem ocupar toda a altura do botão */
+    object-fit: cover; /* Garante que a imagem ocupe toda a área sem distorcer */
+    display: block; /* Remove o espaçamento abaixo da imagem */
+}
+
+/* ÍCONE DE ®️ "R" */
+.supersmall {
+    font-size: 0.6em;
+    vertical-align: super;
+}
+
+/* CARDS DAS IMAGENS */
+.card{
+    left: 1.8%;
+    width: 400px;
+    max-width: 400px;
+    max-height: auto;
+}
   
   

@@ -109,3 +109,10 @@ footer .socials a {
 .cart-count {
   display: none;
 }
+
+
+
+.btn-primary {
+  background-color: #28a745; /* Cor de fundo azul */
+  border-color: #28a745; /* Cor da borda azul */
+}

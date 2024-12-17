@@ -73,7 +73,17 @@ function createProductCard(productId) {
         'produto7': { img: 'imagens/frente.webp', ref: 'REF: 007', size: 'Tamanho: M' },
         'produto8': { img: 'imagens/frente.webp', ref: 'REF: 008', size: 'Tamanho: GG' },
         'produto9': { img: 'imagens/frente.webp', ref: 'REF: 009', size: 'Tamanho: P' },
-        'produto10': { img: 'imagens/frente.webp', ref: 'REF: 010', size: 'Tamanho: G' }
+        'produto10': { img: 'imagens/frente.webp', ref: 'REF: 010', size: 'Tamanho: G' },
+        'produto11': { img: 'imagens/frente11.webp', ref: 'REF: 011', size: 'Tamanho: P' },
+        'produto12': { img: 'imagens/frente12.webp', ref: 'REF: 012', size: 'Tamanho: G' },
+        'produto13': { img: 'imagens/frente13.webp', ref: 'REF: 013', size: 'Tamanho: M' },
+        'produto14': { img: 'imagens/frente14.webp', ref: 'REF: 014', size: 'Tamanho: GG' },
+        'produto15': { img: 'imagens/frente15.webp', ref: 'REF: 015', size: 'Tamanho: P' },
+        'produto16': { img: 'imagens/frente16.webp', ref: 'REF: 016', size: 'Tamanho: G' },
+        'produto17': { img: 'imagens/frente17.webp', ref: 'REF: 017', size: 'Tamanho: GG' },
+        'produto18': { img: 'imagens/frente18.webp', ref: 'REF: 018', size: 'Tamanho: P' },
+        'produto19': { img: 'imagens/frente19.webp', ref: 'REF: 019', size: 'Tamanho: G' },
+        'produto20': { img: 'imagens/frente20.webp', ref: 'REF: 020', size: 'Tamanho: GG' }
     };
 
     const card = document.createElement('div');
@@ -108,7 +118,6 @@ function goToCart() {
 }
 
 // ALERTA DE ADICIONADO AO CARRINHO
-
 // Exibir o alerta
 function showCustomAlert() {
     const alertBox = document.getElementById('custom-alert');
@@ -192,7 +201,8 @@ function startCarousel() {
     }
 }
 
-// Função para criar mensagem e abrir WhatsApp
+
+// FUNÇÃO PARA CRIAR MENSAGEM E ABRIR WHATSAPP
 function checkout() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const productData = {
@@ -205,7 +215,17 @@ function checkout() {
         'produto7': { ref: 'REF: #007', size: 'Tamanho: M' },
         'produto8': { ref: 'REF: #008', size: 'Tamanho: GG' },
         'produto9': { ref: 'REF: #009', size: 'Tamanho: P' },
-        'produto10': { ref: 'REF: #010', size: 'Tamanho: G' }
+        'produto10': { ref: 'REF: #010', size: 'Tamanho: G' },
+        'produto11': { ref: 'REF: #011', size: 'Tamanho: P' },
+        'produto12': { ref: 'REF: #012', size: 'Tamanho: G' },
+        'produto13': { ref: 'REF: #013', size: 'Tamanho: M' },
+        'produto14': { ref: 'REF: #014', size: 'Tamanho: GG' },
+        'produto15': { ref: 'REF: #015', size: 'Tamanho: P' },
+        'produto16': { ref: 'REF: #016', size: 'Tamanho: G' },
+        'produto17': { ref: 'REF: #017', size: 'Tamanho: GG' },
+        'produto18': { ref: 'REF: #018', size: 'Tamanho: P' },
+        'produto19': { ref: 'REF: #019', size: 'Tamanho: G' },
+        'produto20': { ref: 'REF: #020', size: 'Tamanho: GG' }
     };
 
     let message = 'Olá, gostaria de comprar os seguintes itens:\n';
@@ -235,10 +255,3 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount(); // Atualiza o contador ao carregar a página
     loadCart(); // Carrega o carrinho
 });
-
-// FECHAR O ALERTA "X"
-
-function closeAlert() {
-    document.getElementById('custom-alert').style.display = 'none';
-    document.getElementById('dark-overlay').style.display = 'none';
-  }
