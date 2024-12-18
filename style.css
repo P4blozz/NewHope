@@ -270,11 +270,79 @@ footer .socials a {
 }
 
 /* CARDS DAS IMAGENS */
-.card{
+/* Estilo geral dos cards */
+.card {
+    top: 5%;
     left: 1.8%;
     width: 400px;
     max-width: 400px;
     max-height: auto;
+    margin-bottom: 10%;
+    position: relative;                  /* Para permitir o controle de posicionamento */
+    border-radius: 16px;                 /* Bordas arredondadas para um visual suave */
+    background-color: #ffffff;           /* Cor de fundo do card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidade */
+    overflow: hidden;                    /* Esconde o conteúdo que ultrapassa os limites do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Transições suaves */
+    cursor: pointer;                    /* Indicativo de que o card é clicável */
 }
-  
+
+/* Efeito de hover nos cards */
+.card:hover {
+    transform: translateY(-10px);        /* Levanta o card ao passar o mouse */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Aumenta a sombra */
+}
+
+/* Estilo da imagem dentro do card */
+.card img {
+    width: 100%;                         /* A imagem ocupa toda a largura do card */
+    height: 400px;                       /* Altura fixa para a imagem */
+    object-fit: cover;                   /* A imagem será cortada proporcionalmente */
+}
+
+/* Efeito de fade-in no conteúdo do card */
+.card .content {
+    opacity: 0;                          /* Começa invisível */
+    animation: fadeIn 0.5s ease-in-out forwards; /* Animação para exibir o conteúdo */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;                       /* Inicia invisível */
+        transform: translateY(10px);      /* Começa um pouco abaixo */
+    }
+    to {
+        opacity: 1;                       /* Torna-se completamente visível */
+        transform: translateY(0);         /* Termina no seu lugar original */
+    }
+}
+
+/* Estilo do botão "Ir ao topo" */
+.scroll-to-top {
+    position: fixed;  /* Fixa o botão na tela */
+    bottom: 20px;     /* Distância da parte inferior */
+    left: 20px;       /* Distância da parte esquerda */
+    background-color: #ffffff;  /* Cor de fundo do botão */
+    color: rgb(0, 0, 0);     /* Cor do texto */
+    border: none;     /* Sem borda */
+    border-radius: 50%;  /* Botão redondo */
+    width: 40px;      /* Largura do botão */
+    height: 40px;     /* Altura do botão */
+    display: flex;    /* Usando flexbox para centralizar o ícone */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    cursor: pointer; /* Mostra o cursor de pointer quando passa sobre o botão */
+    font-size: 24px;  /* Tamanho do ícone */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Sombras para destacar o botão */
+    transition: background-color 0.3s, transform 0.2s;  /* Transição suave */
+}
+
+/* Ícone dentro do botão (pode usar o ícone de setinha para cima ou qualquer outro) */
+.scroll-to-top i {
+    font-size: 24px;  /* Ajuste o tamanho do ícone */
+}
+
+
+
   

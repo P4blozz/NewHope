@@ -255,3 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount(); // Atualiza o contador ao carregar a página
     loadCart(); // Carrega o carrinho
 });
+
+// Função para rolar até o topo da página
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Rolagem suave
+    });
+}
